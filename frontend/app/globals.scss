@@ -1,0 +1,19 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--background-color);
+
+    font-family: var(--font-geist-sans);
+    color: var(--font-color);
+}
+
+:root {
+    --background-color: #0d121c;
+
+    --font-color: #ffffff;
+}
