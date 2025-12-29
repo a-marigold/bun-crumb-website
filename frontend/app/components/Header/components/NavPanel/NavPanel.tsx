@@ -1,4 +1,6 @@
-'use static';
+'use client';
+
+import { usePathname } from 'next/navigation';
 
 import NavLink from '@/UI/NavLink';
 import type { NavLinkProps } from '@/UI/NavLink';
@@ -12,10 +14,16 @@ const navLinks: NavLinkProps[] = [
 ];
 
 export default function NavPanel() {
+    const pathname = usePathname();
+
     return (
         <nav className={navStyles['nav-panel']}>
             {navLinks.map((linkProps, index) => (
-                <NavLink key={index} {...linkProps} />
+                <NavLink
+                    key={index}
+                    {...linkProps}
+                    isActive={linkProps.href === pathname}
+                />
             ))}
         </nav>
     );

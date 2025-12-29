@@ -12,7 +12,12 @@ export default function Header() {
                 prefetch={false}
                 className={headerStyles['logo-link']}
             >
-                <svg width={67} height={16} color='var(--font-color)'>
+                <svg
+                    width={67}
+                    height={16}
+                    aria-hidden='true'
+                    color='var(--font-color)'
+                >
                     <use href='#crumb-logo' />
                 </svg>
             </Link>

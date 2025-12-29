@@ -22,4 +22,8 @@
     &:hover {
         background-color: var(--hover-bg-color);
     }
+
+    &.active {
+        background-color: var(--accent-color);
+    }
 }

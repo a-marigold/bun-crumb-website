@@ -14,11 +14,6 @@
     border-bottom: 1px var(--border-color) solid;
 
     padding: 0 2rem;
-    box-sizing: border-box;
-}
 
-.logo-link {
-    @include text-wo-margin(1.125rem, 600);
-    color: var(--font-color);
-    font-family: var(--font-geist-mono);
+    box-sizing: border-box;
 }
