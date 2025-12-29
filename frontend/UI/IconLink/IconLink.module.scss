@@ -1,0 +1,18 @@
+@use '@/styles/_mixins.scss' as *;
+
+.icon-link {
+    @include flex-center;
+
+    background-color: transparent;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: var(--button-radius);
+
+    transition: background-color var(--d-transition-dur) ease;
+
+    &:hover {
+        background-color: var(--hover-bg-color);
+    }
+}
