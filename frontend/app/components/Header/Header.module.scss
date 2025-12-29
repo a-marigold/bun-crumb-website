@@ -22,9 +22,3 @@
     color: var(--font-color);
     font-family: var(--font-geist-mono);
 }
-
-.nav-panel {
-    @include flex-y-center;
-
-    gap: 0.25rem;
-}

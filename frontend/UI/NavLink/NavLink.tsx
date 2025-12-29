@@ -19,8 +19,7 @@ export default function NavLink({
             {...attributes}
             className={`${linkStyles['nav-link']} ${className ?? ''}`}
         >
-            {' '}
-            {title}{' '}
+            {title}
         </Link>
     );
 }
