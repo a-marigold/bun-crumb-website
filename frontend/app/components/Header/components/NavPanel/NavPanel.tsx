@@ -48,7 +48,7 @@ export default function NavPanel() {
                 iconWidth={20}
                 iconHeight={20}
                 iconColor='var(--icon-color)'
-                aria-label='Bun Crumb github repository'
+                aria-label='Open Bun Crumb github repository'
             />
         </nav>
     );
