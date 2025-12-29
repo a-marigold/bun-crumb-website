@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: '**'
+
+jobs:
+  FrontendCI:
+    name: Frontend ci
+
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+
+        working-directory: frontend
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: set up pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10.26.0
+        run_install: false
+
+    - name: set up node
+      uses: actions/setup-node@v4
+      with:
+        version: 23
+        cache: pnpm
+        cache-dependency-path: frontend/pnpm-lock.yaml
+
+    - name: install dependencies
+      runs: pnpm install
+
+    - name: run linter
+      runs: pnpm lint
+
+    - name: build
+      runs: pnpm build
