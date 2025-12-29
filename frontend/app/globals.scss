@@ -9,11 +9,26 @@ body {
     background-color: var(--background-color);
 
     font-family: var(--font-geist-sans);
+
     color: var(--font-color);
+}
+
+a {
+    text-decoration: none;
 }
 
 :root {
     --background-color: #0d121c;
 
     --font-color: #ffffff;
+
+    --border-color: #2c3437;
+
+    --hover-bg-color: #2c3437;
+
+    /* sizes. "d" means "default". "m" means "medium" */
+
+    --m-font-size: 0.95rem;
+
+    --d-transition-dur: 0.16s;
 }
