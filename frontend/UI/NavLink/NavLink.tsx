@@ -3,6 +3,7 @@ import Link, { type LinkProps } from 'next/link';
 import linkStyles from './NavLink.module.scss';
 
 export interface NavLinkProps extends LinkProps {
+    href: string;
     isActive?: boolean;
 
     title: string;

@@ -1,14 +1,12 @@
 import type { ButtonHTMLAttributes } from 'react';
 
+import type { IconProps } from '@/types/IconProps';
+
 import buttonStyles from './IconButton.module.scss';
 
 export interface IconButtonProps
-    extends ButtonHTMLAttributes<HTMLButtonElement> {
-    iconHref: `#${string}`;
-    iconWidth: number;
-    iconHeight: number;
-    iconColor?: string;
-
+    extends IconProps,
+        ButtonHTMLAttributes<HTMLButtonElement> {
     'aria-label': string;
 }
 

@@ -9,7 +9,7 @@
     height: 36px;
 
     border: 0;
-    border-radius: 4px;
+    border-radius: var(--button-radius);
 
     transition: background-color var(--d-transition-dur) ease;
 

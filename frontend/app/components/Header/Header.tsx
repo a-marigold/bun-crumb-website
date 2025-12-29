@@ -9,14 +9,15 @@ export default function Header() {
         <header className={headerStyles['header']}>
             <Link
                 href='/'
+                aria-label='Go to home page'
                 prefetch={false}
                 className={headerStyles['logo-link']}
             >
                 <svg
-                    width={67}
-                    height={16}
+                    width={89}
+                    height={20}
                     aria-hidden='true'
-                    color='var(--font-color)'
+                    color='var(--icon-color)'
                 >
                     <use href='#crumb-logo' />
                 </svg>

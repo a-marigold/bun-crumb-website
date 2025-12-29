@@ -1,8 +1,8 @@
 /**
- * Default svg sprite props
+ * Default svg sprite (<use />) props
  */
 export interface IconProps {
-    iconHref: string;
+    iconHref: `#${string}`;
 
     iconWidth: number;
     iconHeight: number;
