@@ -1,0 +1,25 @@
+@use '@/styles/_mixins.scss' as *;
+
+.nav-link {
+    @include flex-center;
+
+    height: 36px;
+
+    background-color: transparent;
+
+    border-radius: 4px;
+
+    padding: 0.5rem 0.75rem;
+
+    box-sizing: border-box;
+
+    color: var(--font-color);
+
+    font-size: var(--m-font-size);
+
+    transition: background-color var(--d-transition-dur) ease;
+
+    &:hover {
+        background-color: var(--hover-bg-color);
+    }
+}
