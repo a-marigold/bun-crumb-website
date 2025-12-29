@@ -1,0 +1,10 @@
+@use '@/styles/_mixins.scss' as *;
+
+.footer {
+    @include flex-y-center;
+    justify-content: space-between;
+
+    border-top: 1px var(--border-color) solid;
+
+    width: 100%;
+}
