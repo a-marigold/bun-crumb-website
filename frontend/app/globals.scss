@@ -12,9 +12,11 @@ body {
 
     color: var(--font-color);
 }
-
 a {
     text-decoration: none;
+}
+pre {
+    margin: 0;
 }
 
 :root {
@@ -22,13 +24,13 @@ a {
 
     --font-color: #ffffff;
     --secondary-font-color: #929fa5;
+    --accent-font-color: #84ba64;
     --icon-color: #d9e1e6;
 
     --border-color: #2c3437;
     --accent-border-color: #417e384d;
 
     /* :active, :focus, :hover colors */
-
     --hover-bg-color: #2c3437;
 
     --accent-color: #418e38;

@@ -1,6 +1,5 @@
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import codeStyles from './CodeBlock.module.scss';
 
 export interface CodeBlockProps {
     codeString: string;

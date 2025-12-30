@@ -29,12 +29,16 @@ createRoute({url: '/hello', method: 'GET', handler: (request, response) => {
 
     return (
         <div className={codeStyles['code-box']}>
-            <div role='tablist' className={codeStyles['tab-block']}>
+            <div role='tablist' className={codeStyles['tab-list']}>
                 {codeExamples.map((example, index) => (
                     <button
                         key={example.name}
                         role='tab'
-                        className={codeStyles['tab']}
+                        className={`${codeStyles['tab']} ${
+                            index === currentTabIndex
+                                ? codeStyles['active']
+                                : ''
+                        }`}
                         onClick={() => {
                             setCurrentTabIndex(index);
                         }}

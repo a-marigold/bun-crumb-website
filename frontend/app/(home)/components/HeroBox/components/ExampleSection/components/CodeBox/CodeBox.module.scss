@@ -1,4 +1,39 @@
+@use '@/styles/_mixins.scss' as *;
+
 .code-box {
+    @include flex-column;
+
     width: 100%;
-    max-width: 400px;
+    height: 100%;
+
+    border: 1px var(--border-color) solid;
+    border-radius: 6px;
+}
+
+.tab-list {
+    display: flex;
+
+    gap: 0.25rem;
+
+    height: 100%;
+    max-height: 56px;
+
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+.tab {
+    height: 100%;
+
+    background-color: transparent;
+
+    border: 0;
+
+    color: var(--font-color);
+    font-size: 1rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    &.active {
+        color: var(--accent-font-color);
+    }
 }
