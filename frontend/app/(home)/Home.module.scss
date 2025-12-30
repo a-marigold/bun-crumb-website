@@ -1,0 +1,8 @@
+@use '@/styles/_mixins.scss' as *;
+
+.home-page {
+    @include flex-column;
+
+    width: 100%;
+    height: 100%;
+}
