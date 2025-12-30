@@ -17,8 +17,6 @@ export interface AccentLinkProps
 }
 
 export default function AccentLink({
-    href,
-
     title,
     className,
 
@@ -28,7 +26,8 @@ export default function AccentLink({
 }: AccentLinkProps) {
     return (
         <a
-            href={href}
+            target='_blank'
+            rel='noopener norefferer'
             {...attributes}
             className={`${linkStyles['accent-link']} ${className ?? ''}`}
         >

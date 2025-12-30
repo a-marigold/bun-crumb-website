@@ -21,13 +21,19 @@ a {
     --background-color: #0d121c;
 
     --font-color: #ffffff;
+    --secondary-font-color: #929fa5;
+    --icon-color: #d9e1e6;
 
     --border-color: #2c3437;
+    --accent-border-color: #417e384d;
+
+    /* :active, :focus, :hover colors */
 
     --hover-bg-color: #2c3437;
-    --accent-color: #418e38;
 
-    --icon-color: #d9e1e6;
+    --accent-color: #418e38;
+    --dim-accent-color: #418e381a;
+    --accent-hover-color: #417e3833;
 
     /* sizes. "d" means "default". "m" means "medium" */
 

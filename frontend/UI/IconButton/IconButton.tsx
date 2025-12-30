@@ -15,7 +15,7 @@ export default function IconButton({
     iconWidth,
     iconHeight,
 
-    iconColor = 'var(--icon-color)',
+    iconColor,
 
     className,
 

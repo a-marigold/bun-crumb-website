@@ -16,8 +16,6 @@ export default function ToolBlock() {
 
             <IconLink
                 href='https://github.com/a-marigold/bun-crumb'
-                target='_blank'
-                rel='noopener norefferer'
                 iconHref='#github-icon'
                 iconWidth={20}
                 iconHeight={20}

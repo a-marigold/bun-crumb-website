@@ -20,13 +20,15 @@ export default function IconLink({
 
     iconHeight,
 
-    iconColor = 'var(--icon-color)',
+    iconColor,
 
     className,
     ...attributes
 }: IconLinkPropsssss) {
     return (
         <a
+            target='_blank'
+            rel='noopener norefferer'
             {...attributes}
             className={`${linkStyles['icon-link']} ${className ?? ''}`}
         >

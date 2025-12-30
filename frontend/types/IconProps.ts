@@ -7,5 +7,5 @@ export interface IconProps {
     iconWidth: number;
     iconHeight: number;
 
-    iconColor?: string;
+    iconColor: string;
 }

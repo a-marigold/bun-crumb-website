@@ -26,6 +26,7 @@ export default function Header() {
 
             <div className={headerStyles['nav-block']}>
                 <NavPanel />
+
                 <ToolBlock />
             </div>
         </header>
