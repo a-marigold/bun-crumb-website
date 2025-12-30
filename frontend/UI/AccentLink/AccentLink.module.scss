@@ -2,7 +2,7 @@
 
 .accent-link {
     @include flex-center;
-    gap: 0.25rem;
+    gap: 0.5rem;
 
     width: 100%;
     height: 100%;
@@ -28,4 +28,7 @@
     &:hover {
         background-color: var(--accent-hover-color);
     }
+}
+.icon {
+    @include flex-center;
 }

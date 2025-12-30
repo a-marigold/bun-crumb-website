@@ -32,17 +32,19 @@ export default function AccentLink({
             {...attributes}
             className={`${linkStyles['accent-link']} ${className ?? ''}`}
         >
+            {title}
+
             {icon && (
                 <svg
                     width={icon.iconWidth}
                     height={icon.iconHeight}
-                    color={icon.iconColor || 'var(--icon-color)'}
+                    color={icon.iconColor}
+                    aria-hidden='true'
+                    className={linkStyles['icon']}
                 >
                     <use href={icon.iconHref} />
                 </svg>
             )}
-
-            {title}
         </a>
     );
 }
