@@ -1,0 +1,7 @@
+@use '@/styles/_mixins.scss' as *;
+
+.tool-block {
+    @include flex-y-center;
+
+    gap: 0.25rem;
+}

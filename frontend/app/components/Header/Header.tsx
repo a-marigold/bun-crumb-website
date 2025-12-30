@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import NavPanel from './components/NavPanel';
+import ToolBlock from './components/ToolBlock/ToolBlock';
 
 import headerStyles from './Header.module.scss';
 
@@ -23,7 +24,10 @@ export default function Header() {
                 </svg>
             </Link>
 
-            <NavPanel />
+            <div className={headerStyles['nav-block']}>
+                <NavPanel />
+                <ToolBlock />
+            </div>
         </header>
     );
 }
