@@ -1,6 +1,6 @@
 import AccentLink from '@/UI/AccentLink';
 
-import textStyles from './TextBox.module.scss';
+import textStyles from './TextSection.module.scss';
 
 export default function TextSection() {
     return (
