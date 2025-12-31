@@ -23,8 +23,7 @@ a {
 pre {
     margin: 0;
 
-    flex-shrink: 0;
-
+    flex: 0 0 auto;
     @include with-scrollbar();
 }
 

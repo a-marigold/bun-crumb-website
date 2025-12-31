@@ -8,13 +8,16 @@
     border: 1px var(--border-color) solid;
 
     border-radius: 6px;
+    min-height: 0;
 }
+
 .tab-list {
     display: flex;
     gap: 0.25rem;
 
-    height: 100%;
-    max-height: 46px;
+    flex: 0 0 auto;
+
+    height: 46px;
 
     padding: 0 1rem;
     box-sizing: border-box;
@@ -52,6 +55,8 @@
 .info-block {
     @include flex-y-center;
     justify-content: space-between;
+
+    flex: 0 0 auto;
 
     width: 100%;
 

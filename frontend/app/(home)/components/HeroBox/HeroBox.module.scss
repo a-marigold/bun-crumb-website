@@ -8,7 +8,7 @@
 
     width: 100%;
     max-width: 1200px;
-    height: 100%;
+    // height: 100%;
 
     padding-top: 3em;
 
@@ -19,7 +19,7 @@
 @media (max-width: map-get($media-breakpoints, large)) {
     .hero-box {
         flex-direction: column;
-
+        justify-content: initial;
         align-items: center;
     }
 }
