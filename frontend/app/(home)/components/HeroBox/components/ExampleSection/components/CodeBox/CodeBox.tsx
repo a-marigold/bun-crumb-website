@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { ReactNode } from 'react';
 
 import CodeBlock from '@/UI/CodeBlock';
+import ToolButton from '@/UI/ToolButton';
 
 import codeStyles from './CodeBox.module.scss';
 
@@ -79,6 +80,20 @@ createRoute({url: '/hello', method: 'GET', handler: (request, response) => {
 
             <div className={codeStyles['info-block']}>
                 {currentCodeExample.languageIcon}
+
+                <ToolButton
+                    title='Copy'
+                    iconHref='#clipboard-icon'
+                    iconWidth={24}
+                    iconHeight={24}
+                    iconColor='var(--secondary-font-color)'
+                    aria-label='Copy the code abody to clipboard'
+                    onClick={() => {
+                        navigator.clipboard.writeText(
+                            currentCodeExample.codeString
+                        );
+                    }}
+                />
             </div>
         </div>
     );

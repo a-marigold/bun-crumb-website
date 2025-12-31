@@ -23,6 +23,8 @@ a {
 pre {
     margin: 0;
 
+    flex-shrink: 0;
+
     @include with-scrollbar();
 }
 
@@ -32,6 +34,9 @@ code {
 
 :root {
     --background-color: #0d121c;
+
+    --neutral-bg-color: #2c3437;
+    --light-neutral-bg-color: #556066;
 
     --font-color: #ffffff;
     --secondary-font-color: #d2d7da;
@@ -46,6 +51,7 @@ code {
     --scrollbar-track-color: #192236;
 
     --typescript-logo-color: #3181c6;
+
     /* :active, :focus, :hover colors */
     --hover-bg-color: #2c3437;
 
