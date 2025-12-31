@@ -13,10 +13,11 @@ export default function CodeBox() {
         {
             name: 'Handle Request',
 
-            codeString: `import { createRoute , listen } from 'bun-crumb';
+            codeString: `import { createRoute, listen } from 'bun-crumb';
 
 createRoute({url: '/hello', method: 'GET', handler: (request, response) => {
-    return response.send('world!')
+    
+    return response.send('hello world!')
 }})`,
         },
         {

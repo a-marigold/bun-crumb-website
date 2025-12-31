@@ -22,10 +22,9 @@ a {
 pre {
     margin: 0;
 
-    overflow-x: auto;
-
     @include with-scrollbar(var(--border-color), var(--dim-accent-color), thin);
 }
+
 code {
     font-family: var(--font-geist-mono);
 }

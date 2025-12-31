@@ -1,10 +1,20 @@
+@use '@/styles/_variables.scss' as *;
+
 .hero-box {
     display: flex;
+    justify-content: space-between;
+
     gap: 3.5rem;
 
+    width: 100%;
+    max-width: 1000px;
     height: 100%;
 
     padding-top: 3em;
+
     padding-bottom: 3em;
     box-sizing: border-box;
 }
+
+// @media (max-width: map-get($media-breakpoints, )) {
+// }
