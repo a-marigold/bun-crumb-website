@@ -3,7 +3,7 @@
 
 import NavLink from '@/UI/NavLink';
 
-import IconButton from '@/UI/IconButton';
+import IconLink from '@/UI/IconLink';
 
 import footerStyles from './Footer.module.scss';
 
@@ -16,7 +16,8 @@ export default function Footer() {
                 aria-label='Get started with documentation'
             />
 
-            <IconButton
+            <IconLink
+                href='https://github.com/a-marigold/bun-crumb'
                 iconHref='#github-icon'
                 iconWidth={20}
                 iconHeight={20}

@@ -29,9 +29,11 @@
 
 .tab {
     height: 100%;
+
     background-color: transparent;
 
     border: 0;
+
     border-radius: 8px;
 
     color: var(--font-color);
@@ -39,6 +41,7 @@
     font-size: 1rem;
 
     font-weight: 500;
+
     white-space: nowrap;
 
     cursor: pointer;
@@ -46,4 +49,14 @@
     &.active {
         color: var(--accent-font-color);
     }
+}
+
+.info-block {
+    @include flex-y-center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
 }

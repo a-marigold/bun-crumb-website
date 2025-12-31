@@ -1,4 +1,5 @@
 @use '@/styles/_mixins.scss' as *;
+@use '@/styles/_variables.scss' as *;
 
 .home-page {
     @include flex-column;
@@ -10,4 +11,11 @@
     padding-left: 6em;
     padding-right: 6em;
     box-sizing: border-box;
+}
+
+@media (max-width: map-get($media-breakpoints, small)) {
+    .home-page {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }

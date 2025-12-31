@@ -6,10 +6,14 @@
     background-color: transparent;
 
     width: 36px;
+
     height: 36px;
 
     border: 0;
+
     border-radius: var(--button-radius);
+
+    padding: 0;
 
     transition: background-color var(--d-transition-dur) ease;
 

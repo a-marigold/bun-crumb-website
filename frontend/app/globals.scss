@@ -8,10 +8,11 @@ body {
 body {
     margin: 0;
 
+    @include flex-column;
+
     background-color: var(--background-color);
 
     font-family: var(--font-geist-sans);
-
     color: var(--font-color);
 }
 
@@ -22,7 +23,7 @@ a {
 pre {
     margin: 0;
 
-    @include with-scrollbar(var(--border-color), var(--dim-accent-color), thin);
+    @include with-scrollbar();
 }
 
 code {
@@ -40,6 +41,11 @@ code {
     --border-color: #2c3437;
     --accent-border-color: #417e384d;
 
+    --scrollbar-thumb-color: #58696f;
+
+    --scrollbar-track-color: #192236;
+
+    --typescript-logo-color: #3181c6;
     /* :active, :focus, :hover colors */
     --hover-bg-color: #2c3437;
 
@@ -49,6 +55,7 @@ code {
 
     /* sizes. "d" means "default". "m" means "medium" */
 
+    --d-font-size: 0.775rem;
     --m-font-size: 0.95rem;
 
     --d-transition-dur: 0.16s;

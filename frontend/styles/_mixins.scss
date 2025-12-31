@@ -33,8 +33,8 @@
 }
 
 @mixin with-scrollbar(
-    $thumb-color: var(--dim-accent-color),
-    $track-color: var(--background-color),
+    $thumb-color: var(--scrollbar-thumb-color),
+    $track-color: var(--scrollbar-track-color),
     $width: thin
 ) {
     scrollbar-width: $width;

@@ -20,7 +20,7 @@ export default function Header() {
                     aria-hidden='true'
                     color='var(--icon-color)'
                 >
-                    <use href='#crumb-logo' />
+                    <use href='#crumb-logo-icon' />
                 </svg>
             </Link>
 
