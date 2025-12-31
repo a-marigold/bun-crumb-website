@@ -1,18 +1,18 @@
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import SyntaxHighlighter, {
+    type SyntaxHighlighterProps,
+} from 'react-syntax-highlighter';
 import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-export interface CodeBlockProps {
-    codeString: string;
-}
-export default function CodeBlock({ codeString }: CodeBlockProps) {
+export type CodeBlockProps = SyntaxHighlighterProps;
+export default function CodeBlock({ children, ...props }: CodeBlockProps) {
     return (
         <SyntaxHighlighter
-            language='javascript'
             style={anOldHope}
             showLineNumbers
-            codeTagProps={{ style: { fontSize: '0.95rem' } }}
+            codeTagProps={{ style: { fontSize: '12px' } }}
+            {...props}
         >
-            {codeString}
+            {children}
         </SyntaxHighlighter>
     );
 }
