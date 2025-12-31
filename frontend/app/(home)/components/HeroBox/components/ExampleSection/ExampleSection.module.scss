@@ -10,5 +10,11 @@
 }
 
 .hint {
-    font-size: var(--d-font-size);
+    @include text-wo-margin(var(--m-font-size), 300);
+
+    color: var(--secondary-font-color);
+}
+
+.highlighted-link {
+    color: var(--accent-font-color);
 }

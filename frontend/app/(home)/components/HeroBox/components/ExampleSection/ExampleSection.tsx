@@ -10,7 +10,13 @@ export default function ExampleSection() {
             <CodeBox />
 
             <p className={exampleStyles['hint']}>
-                Get more examples in <Link href={'/docs'}> docs </Link>
+                Get more examples in&nbsp;
+                <Link
+                    href='/docs'
+                    className={exampleStyles['highlighted-link']}
+                >
+                    docs
+                </Link>
             </p>
         </section>
     );
