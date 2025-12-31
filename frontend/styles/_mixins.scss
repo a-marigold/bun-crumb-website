@@ -31,3 +31,21 @@
 
     font-weight: $font-weight;
 }
+
+@mixin with-scrollbar(
+    $thumb-color: var(--dim-accent-color),
+    $track-color: var(--background-color),
+    $width: thin
+) {
+    scrollbar-width: $width;
+
+    scrollbar-color: $thumb-color $track-color;
+
+    &::-webkit-scrollbar-thumb {
+        color: $thumb-color;
+    }
+
+    &::-webkit-scrollbar-track {
+        color: $track-color;
+    }
+}
