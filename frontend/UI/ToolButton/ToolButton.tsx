@@ -27,7 +27,12 @@ export default function ToolButton({
             {...attributes}
             className={`${buttonStyles['tool-button']} ${className ?? ''}`}
         >
-            <svg width={iconWidth} height={iconHeight} color={iconColor}>
+            <svg
+                width={iconWidth}
+                height={iconHeight}
+                color={iconColor}
+                aria-hidden='true'
+            >
                 <use href={iconHref} />
             </svg>
 

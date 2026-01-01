@@ -10,6 +10,7 @@ import codeStyles from './CodeBox.module.scss';
 
 type CodeExample = {
     name: string;
+
     codeString: string;
 
     language: string;
@@ -18,7 +19,13 @@ type CodeExample = {
 };
 
 const typescriptSvgSprite = (
-    <svg width={27} height={26} color='var(--typescript-logo-color)'>
+    <svg
+        role='img'
+        width={27}
+        height={26}
+        color='var(--typescript-logo-color)'
+        aria-label='TypeScript language'
+    >
         <use href='#typescript-logo-icon' />
     </svg>
 );
@@ -59,6 +66,7 @@ createRoute({url: '/hello', method: 'GET', handler: (request, response) => {
                 {codeExamples.map((example, index) => (
                     <button
                         key={example.name}
+                        type='button'
                         role='tab'
                         className={`${codeStyles['tab']} ${
                             index === currentTabIndex

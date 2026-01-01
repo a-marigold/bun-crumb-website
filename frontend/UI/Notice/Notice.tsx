@@ -7,7 +7,7 @@ export interface NoticeProps {
 }
 export default function Notice({ title, onClose }: NoticeProps) {
     return (
-        <div role='status' className={noticeStyles['notice']}>
+        <div className={`${noticeStyles['notice']} ${''}`}>
             <div className={noticeStyles['text-block']}>
                 <span className={noticeStyles['title']}>{title}</span>
             </div>
