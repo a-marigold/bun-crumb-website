@@ -1,0 +1,45 @@
+@use '@/styles/_mixins.scss' as *;
+
+.notice {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    background-color: var(--background-color);
+
+    border-radius: 6px;
+
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.text-block {
+    @include flex-column;
+}
+
+.title {
+    color: var(--font-color);
+    font-size: 1rem;
+}
+
+.close-button {
+    @include flex-center;
+
+    background-color: transparent;
+
+    height: 26px;
+
+    border-radius: 4px;
+
+    padding: 0 0.625rem;
+    box-sizing: border-box;
+
+    color: var(--accent-font-color);
+    font-size: 0.75rem;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--hover-bg-color);
+    }
+}
