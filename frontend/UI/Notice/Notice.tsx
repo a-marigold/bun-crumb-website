@@ -1,3 +1,9 @@
+'use client';
+
+import { useRef } from 'react';
+
+import { useHorizontalDraggable } from '@/hooks/useDraggable';
+
 import noticeStyles from './Notice.module.scss';
 
 export interface NoticeProps {
@@ -5,9 +11,14 @@ export interface NoticeProps {
 
     onClose: () => void;
 }
+
 export default function Notice({ title, onClose }: NoticeProps) {
+    const noticeRef = useRef<HTMLOutputElement>(null);
+
+    useHorizontalDraggable(noticeRef, 0, 120, onClose);
+
     return (
-        <div className={`${noticeStyles['notice']} ${''}`}>
+        <output ref={noticeRef} className={noticeStyles['notice']}>
             <div className={noticeStyles['text-block']}>
                 <span className={noticeStyles['title']}>{title}</span>
             </div>
@@ -15,11 +26,6 @@ export default function Notice({ title, onClose }: NoticeProps) {
             <button className={noticeStyles['close-button']} onClick={onClose}>
                 Close
             </button>
-        </div>
+        </output>
     );
 }
-
-// !
-
-type a = 's' | 'b' | (string & {});
-// !
