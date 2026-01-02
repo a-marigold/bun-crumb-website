@@ -1,5 +1,6 @@
 'use static';
-//
+
+import { GITHUB_REPO_URL } from '@/constants/githubRepoUrl';
 
 import NavLink from '@/UI/NavLink';
 
@@ -17,7 +18,7 @@ export default function Footer() {
             />
 
             <IconLink
-                href='https://github.com/a-marigold/bun-crumb'
+                href={GITHUB_REPO_URL}
                 iconHref='#github-logo-icon'
                 iconWidth={20}
                 iconHeight={20}

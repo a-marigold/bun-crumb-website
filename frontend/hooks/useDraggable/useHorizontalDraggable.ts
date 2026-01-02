@@ -4,6 +4,7 @@ import type { RefObject } from 'react';
 /**
  *
  *
+ *
  * @param {HTMLElement | null} elementRef
  * @param {number} minLeft
  * @param {number} maxLeft
@@ -13,39 +14,46 @@ export const useHorizontalDraggable = (
     elementRef: RefObject<HTMLElement | null>,
 
     minLeft?: number,
+
     maxLeft?: number,
 
-    onElementLeave?: () => void
+    onElementLeaveMin?: () => void,
+
+    onElementLeaveMax?: () => void
 ) => {
     useEffect(() => {
         if (!elementRef.current) return;
 
-        let startLeft = 0;
         let startClientX = 0;
+
+        let startLeft = 0;
+
         let lastLeft = 0;
 
         const handlePointerMove = (event: MouseEvent) => {
-            if (!elementRef.current) return;
+            requestAnimationFrame(() => {
+                if (!elementRef.current) return;
 
-            const clientX = event.clientX;
+                const clientX = event.clientX;
 
-            const deltaClientX = clientX - startClientX;
+                const deltaClientX = clientX - startClientX;
 
-            lastLeft = startLeft + deltaClientX;
+                lastLeft = startLeft + deltaClientX;
 
-            if (minLeft !== undefined && lastLeft <= minLeft) {
-                onElementLeave?.();
+                if (minLeft !== undefined && lastLeft <= minLeft) {
+                    onElementLeaveMin?.();
 
-                lastLeft = minLeft;
-            }
+                    lastLeft = minLeft;
+                }
 
-            if (maxLeft !== undefined && lastLeft >= maxLeft) {
-                onElementLeave?.();
+                if (maxLeft !== undefined && lastLeft >= maxLeft) {
+                    onElementLeaveMax?.();
 
-                lastLeft = maxLeft;
-            }
+                    lastLeft = maxLeft;
+                }
 
-            elementRef.current.style.transform = `translateX(${lastLeft}px)`;
+                elementRef.current.style.transform = `translateX(${lastLeft}px)`;
+            });
         };
 
         const handlePointerUp = () => {
@@ -62,6 +70,7 @@ export const useHorizontalDraggable = (
             startClientX = event.clientX;
 
             window.addEventListener('pointermove', handlePointerMove);
+
             window.addEventListener('pointerup', handlePointerUp);
         };
 
@@ -70,6 +79,7 @@ export const useHorizontalDraggable = (
         return () => {
             elementRef.current?.removeEventListener(
                 'pointerdown',
+
                 handlePointerDown
             );
         };

@@ -2,6 +2,7 @@ import IconButton from '@/UI/IconButton';
 import IconLink from '@/UI/IconLink';
 
 import toolStyles from './ToolBlock.module.scss';
+import { GITHUB_REPO_URL } from '@/constants/githubRepoUrl';
 
 export default function ToolBlock() {
     return (
@@ -15,7 +16,7 @@ export default function ToolBlock() {
             />
 
             <IconLink
-                href='https://github.com/a-marigold/bun-crumb'
+                href={GITHUB_REPO_URL}
                 iconHref='#github-logo-icon'
                 iconWidth={20}
                 iconHeight={20}

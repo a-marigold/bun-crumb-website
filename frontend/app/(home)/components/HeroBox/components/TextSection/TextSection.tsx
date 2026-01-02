@@ -1,3 +1,5 @@
+import { GITHUB_REPO_URL } from '@/constants/githubRepoUrl';
+
 import AccentLink from '@/UI/AccentLink';
 
 import textStyles from './TextSection.module.scss';
@@ -14,7 +16,7 @@ export default function TextSection() {
             </div>
 
             <AccentLink
-                href='https://github.com/a-marigold/bun-crumb'
+                href={GITHUB_REPO_URL}
                 title='Star on GitHub'
                 aria-label='Give a star on GitHub'
                 icon={{
