@@ -12,11 +12,19 @@ import noticeStyles from './NoticeRoot.module.scss';
 
 export default function NoticeRoot() {
     const currentNotice = useNoticeStore((state) => state.currentNotice);
+
     const currentExistenceTime = useNoticeStore(
         (state) => state.currentExistenceTime
     );
+    const hideNotice = useNoticeStore((state) => state.hide);
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        const noticeTimeout = setTimeout(hideNotice, currentExistenceTime);
+
+        return () => {
+            clearTimeout(noticeTimeout);
+        };
+    }, [currentNotice, currentExistenceTime]);
 
     return (
         <div className={noticeStyles['notice-root']}>

@@ -7,7 +7,7 @@ import type { NoticeProps } from '@/UI/Notice';
 interface NoticeStore {
     currentNotice: NoticeProps | null;
 
-    currentExistenceTime: 3000 | (number & {});
+    currentExistenceTime: typeof NOTICE_EXISTENCE_TIME | (number & {});
 
     show: (props: NoticeProps, existenceTime?: number) => void;
 
