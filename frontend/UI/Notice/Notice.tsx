@@ -15,7 +15,7 @@ export interface NoticeProps {
 export default function Notice({ title, onClose }: NoticeProps) {
     const noticeRef = useRef<HTMLOutputElement>(null);
 
-    useHorizontalDraggable(noticeRef, 0, 120, onClose);
+    useHorizontalDraggable(noticeRef, 0, 120, undefined, onClose);
 
     return (
         <output ref={noticeRef} className={noticeStyles['notice']}>

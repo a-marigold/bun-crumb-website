@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import type { ReactNode } from 'react';
 
+import { useNoticeStore } from '@/store/NoticeStore';
+
 import CodeBlock from '@/UI/CodeBlock';
 import ToolButton from '@/UI/ToolButton';
 
@@ -60,6 +62,9 @@ createRoute({url: '/hello', method: 'GET', handler: (request, response) => {
 
     const currentCodeExample = codeExamples[currentTabIndex];
 
+    const showNotice = useNoticeStore((state) => state.show);
+    const hideNotice = useNoticeStore((state) => state.hide);
+
     return (
         <div className={codeStyles['code-box']}>
             <div role='tablist' className={codeStyles['tab-list']}>
@@ -100,6 +105,8 @@ createRoute({url: '/hello', method: 'GET', handler: (request, response) => {
                         navigator.clipboard.writeText(
                             currentCodeExample.codeString
                         );
+
+                        showNotice({ title: 'Copied!', onClose: hideNotice });
                     }}
                 />
             </div>

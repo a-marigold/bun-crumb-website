@@ -1,0 +1,1 @@
+export const NOTICE_EXISTENCE_TIME = 3200;

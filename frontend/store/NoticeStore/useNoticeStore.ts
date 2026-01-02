@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 
+import { NOTICE_EXISTENCE_TIME } from '@/constants/noticeExistenceTime';
+
 import type { NoticeProps } from '@/UI/Notice';
 
 interface NoticeStore {
@@ -7,19 +9,26 @@ interface NoticeStore {
 
     currentExistenceTime: 3000 | (number & {});
 
-    setCurrentNotice: (props: NoticeProps, existenceTime?: number) => void;
+    show: (props: NoticeProps, existenceTime?: number) => void;
+
+    hide: () => void;
 }
 
 export const useNoticeStore = create<NoticeStore>()((set) => ({
     currentNotice: null,
 
-    currentExistenceTime: 3000,
+    currentExistenceTime: NOTICE_EXISTENCE_TIME,
 
-    setCurrentNotice: (props, existenceTime) =>
+    show: (props, existenceTime) =>
         set({
             currentNotice: props,
             currentExistenceTime: existenceTime || 3000,
         }),
-}));
 
-useNoticeStore.setState({ currentNotice: { title: 'hello' } });
+    hide: () =>
+        set({
+            currentNotice: null,
+
+            currentExistenceTime: NOTICE_EXISTENCE_TIME,
+        }),
+}));

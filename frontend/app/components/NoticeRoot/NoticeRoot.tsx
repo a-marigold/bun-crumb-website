@@ -16,7 +16,7 @@ export default function NoticeRoot() {
         (state) => state.currentExistenceTime
     );
 
-    useEffect(() => {});
+    useEffect(() => {}, []);
 
     return (
         <div className={noticeStyles['notice-root']}>
